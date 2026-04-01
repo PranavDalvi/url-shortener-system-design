@@ -372,10 +372,10 @@ Location: https://example.com/some/very/long/url
 - Login -> 10/min
 
 # ER Diagram
-![](./Diagrams/ER-diagram-raw.webp)
+![](./Docs/Diagrams/ER-diagram-raw.webp)
 
 # HLD Diagram
-![](./Diagrams/HLD.webp)
+![](./Docs/Diagrams/HLD.webp)
 
 ## Tech Stack
 
