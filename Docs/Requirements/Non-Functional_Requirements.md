@@ -4,7 +4,7 @@ _These matter more than functional ones in system design._
 
 ## Performance
 
-- URL rediirect latency should be <100 ms
+- URL redirect latency should be <100 ms
 - Link creation latency should be < 500 ms
 
 ## Scalability
@@ -33,7 +33,7 @@ _These matter more than functional ones in system design._
 
 - System should:
   - validate URLs
-  - prevent phisihing domains
+  - prevent phishing domains
   - rate limit API usage
   - protect user accounts
 

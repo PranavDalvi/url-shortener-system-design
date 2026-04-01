@@ -29,10 +29,10 @@
   {
   "id": "url_123",
   "title":"my first short url",
-  "shortUrl": "https://sho.rt/my-link"
-  "longURL": "https://example.com/some/very/long/url",
+  "shortUrl": "https://sho.rt/my-link",
+  "longUrl;": "https://example.com/some/very/long/url",
   "createdAt": "2026-03-08T18:00:00Z",
-  "expiryDate": "2026-12-01T00:00:00Z"
+  "expiryDate": "2026-12-01T00:00:00Z",
   }
 ```
 
@@ -67,23 +67,23 @@ Location: https://example.com/some/very/long/url
 
 ### Get URL Details
 
-- `GET /api/v1/urls/{id}`
+- `GET /api/v1/urls/{shortKey}`
 
 - Request
 
 ```bash
-/api/v1/urls/{id}
+/api/v1/urls/{shortKey}
 ```
 
 - Response
 
 ```bash
-"id":"url_123"
+"id":"url_123",
 "title":"my first short url",
-"shortUrl": "https://sho.rt/my-link"
-"longURL": "https://example.com/some/very/long/url"
+"shortUrl": "https://sho.rt/my-link",
+"longUrl": "https://example.com/some/very/long/url",
 "createdAt": "2026-03-08T18:00:00Z",
-"expiryDate": "2026-12-01T00:00:00Z"
+"expiryDate": "2026-12-01T00:00:00Z",
 ```
 
 ### List User URLs
@@ -95,8 +95,8 @@ Location: https://example.com/some/very/long/url
 
 - Filters will be:
   - status: ["active", "disabled", "blocked", "deleted"]
-  - deleted because when user delets the url it should be in recycle bin for 30 days.
-  - search: on longURLs, shortUrls / custom alias.
+  - deleted because when user delete the url it should be in recycle bin for 30 days.
+  - search: on longUrls, shortUrls / custom alias.
   - Sort by createdAt, updatedAt, clickCount, expiryDate, title
 
 - Response
@@ -116,27 +116,27 @@ Location: https://example.com/some/very/long/url
     "page": 1,
     "limit": 20,
     "total": 145,
-    "totalPages": 8
+    "totalPages": 8,
   }
 }
 ```
 
 ### Update URL
 
-- `PATCH /api/v1/urls/{id}`
+- `PATCH /api/v1/urls/{shortKey}`
 
 - Request
 
 ```bash
 {
-    "longURL": "https://newsite.com",
+    "longUrl": "https://newsite.com",
     "expiryDate": "2027-01-01",
 }
 ```
 
 ### Delete URL
 
-- `DELETE /api/v1/urls/{id}`
+- `DELETE /api/v1/urls/{shortKey}`
 
 - Response
 
@@ -166,7 +166,7 @@ Location: https://example.com/some/very/long/url
 ```bash
 {
   "accessToken": "jwt_access_token",
-  "refreshToken": "refresh_token"
+  "refreshToken": "refresh_token",
 }
 ```
 
@@ -177,7 +177,7 @@ Location: https://example.com/some/very/long/url
 ```bash
 {
     "accessToken":"jwt_token",
-    "refreshToken":"refresh_token"
+    "refreshToken":"refresh_token",
 }
 ```
 
@@ -187,7 +187,7 @@ Location: https://example.com/some/very/long/url
 
 ```bash
 {
-    "refreshToken":"refresh_token"
+    "refreshToken":"refresh_token",
 }
 ```
 
@@ -195,8 +195,8 @@ Location: https://example.com/some/very/long/url
 
 ```bash
 {
-    "accessToken":"new_access_token"
-    "refreshToken": "new_refresh_token"
+    "accessToken":"new_access_token",
+    "refreshToken": "new_refresh_token",
 }
 ```
 
@@ -213,10 +213,10 @@ Location: https://example.com/some/very/long/url
 {
     "totalClicks":1543,
     "dailyClicks": [
-        {"date":"2026-03-07", "clicks": 120}
+        {"date":"2026-03-07", "clicks": 120},
     ],
     "topCountries":[
-        {"country":"IN", "clicks":600}
+        {"country":"IN", "clicks":600},
     ]
 }
 ```
@@ -230,7 +230,7 @@ Location: https://example.com/some/very/long/url
 ```bash
 {
     "shortUrl":"https://sho.rt/aB3dX9",
-    "reason":"phishing"
+    "reason":"phishing",
 }
 ```
 
@@ -250,7 +250,7 @@ Location: https://example.com/some/very/long/url
 {
   "urls": [
     "https://google.com",
-    "https://youtube.com"
+    "https://youtube.com",
   ]
 }
 ```

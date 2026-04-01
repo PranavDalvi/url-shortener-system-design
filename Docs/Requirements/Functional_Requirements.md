@@ -1,5 +1,4 @@
 # Functional Requirements
-
 ## Core URL Features
 
 - Users should be able to **convert a long URL into a short** URL.
@@ -35,6 +34,6 @@
 ## Optional Features
 
 - Generate QR code for shorten URL.
-- Provide perview page before redirects to prevent phishing.
+- Provide previews page before redirects to prevent phishing.
 - Allow password-protected links.
 - Allow temporary links
